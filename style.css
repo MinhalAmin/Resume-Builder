@@ -1,0 +1,111 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0;
+    background-color:white;
+}
+
+form {
+    margin: auto;
+    background-color: rgb(228, 250, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+fieldset {
+    border: 3px solid  #39bee6;
+    
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(240, 253, 255);
+}
+
+legend {
+    font-weight:bolder;
+    text-align: center;
+    color: rgb(34, 29, 29);
+    font-size: larger;
+
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size:medium;
+
+}
+
+input,textarea {
+    margin-top: 4px;
+    padding: 8px;
+    width: calc(100% - 1px);
+    border: 1px solid  #39bee6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: skyblue;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button :hover {
+    color: #39d8e6;
+}
+
+#resume-display {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid ;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#resume-display h2 {
+    color: black;
+    text-align: center;
+    font-size:xx-large;
+}
+#resume-display p {
+    color: black;
+    font-weight:lighter;
+    font-size:17px;
+}
+
+#resume-display h3 {
+    font-size:larger;
+  padding: 2%;
+  margin: 20px 0 10px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #39bee6;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+
+}
+
+

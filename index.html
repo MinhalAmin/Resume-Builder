@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+     <h1><b>RESUME BUILDER</b></h1>
+     <form id="resume-form">
+        <fieldset>
+            <legend><b>Objective</b></legend>
+            <textarea type="text" id="objective" placeholder="Enter your objective" required rows="5"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <b> Personal Information</b> 
+            </legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Residential Address:</label>
+            <input type="text" id="address" placeholder="Enter your address" required>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Education</b></legend>
+            <textarea id="education" placeholder="Enter your eduction" required rows="15" ></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend><b>Work Experience</legend>
+            <textarea id="experience" placeholder="Enter your experience" required rows="15" ></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Skills</b></legend>
+            <textarea id="skills" placeholder="Enter your skills" required rows="20" ></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Achievements</b></legend>
+            <textarea id="achievements" placeholder="Enter your achievements" rows="10" ></textarea>
+        </fieldset>
+        <button type="submit"><b>Generate Resume</b></button>
+     </form>
+
+     <br>
+     <!-- dynamic resume -->
+      <div id="resume-display">
+        <!-- resume will be generated below -->
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
