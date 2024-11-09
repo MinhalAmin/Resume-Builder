@@ -48,3 +48,63 @@ form.addEventListener('submit',(event:Event)=>{
     resumeDisplayElement.innerHTML=resumeHtml
    }
 })
+
+// Helper function to get query parameters
+function getQueryParam(param: string): string | null {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+  
+  // Use the parameter to load specific resume data
+  function loadResume() {
+    const resumeId = getQueryParam('id');
+    if (resumeId) {
+      // Replace this with actual data retrieval logic, such as fetching from a database or JSON file
+      console.log(`Loading resume for ID: ${resumeId}`);
+      
+      // Example: Fetch resume data based on ID and display it
+      fetch(`https://api.example.com/resumes/${resumeId}`)
+        .then(response => response.json())
+        .then(data => displayResume(data))
+        .catch(error => console.error('Error loading resume:', error));
+    } else {
+      console.log('No resume ID provided in the URL');
+    }
+  }
+  
+  // Function to display resume data on the page
+  function displayResume(data: any) {
+    // Populate the HTML with resume data here
+    document.getElementById('resumeTitle')!.innerText = data.title;
+    document.getElementById('resumeContent')!.innerHTML = data.content;
+  }
+  
+  // Call the function on page load
+  window.onload = loadResume;
+
+  // Share the resume URL using the Web Share API
+function shareResume() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'My Resume',
+        text: 'Check out my resume!',
+        url: window.location.href,
+      })
+      .then(() => console.log('Resume shared successfully'))
+      .catch(error => console.error('Error sharing resume:', error));
+    } else {
+      alert('Sharing is not supported on this device.');
+    }
+  }
+  
+  // Copy the resume URL to the clipboard
+  function copyResumeLink() {
+    navigator.clipboard.writeText(window.location.href)
+      .then(() => alert('Link copied to clipboard'))
+      .catch(error => console.error('Error copying link:', error));
+  }
+  
+  // Event listeners for the buttons
+  document.getElementById('shareButton')?.addEventListener('click', shareResume);
+  document.getElementById('copyButton')?.addEventListener('click', copyResumeLink);
+  
