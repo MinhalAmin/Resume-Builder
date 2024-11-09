@@ -108,4 +108,17 @@ button :hover {
 
 }
 
+h2{
+    font-size: larger;
+    color: black;
+}
 
+
+a{
+    font-size: small;
+    color: black;
+}
+p{
+    font-size: small;
+    font-weight: lighter;
+}

@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Resume Builder By Minhal</title>
+    <title>Sharebale Resume Builder</title>
 </head>
 <body>
-     <h1><b>RESUME BUILDER BY MINHAL</b></h1>
+     <h1><b>SHARABLE RESUME GENERATOR <br> By Minhal</b></h1>
      <form id="resume-form">
         <fieldset>
-            <legend><b>Objective</b></legend>
+            <legend><b>Career Objectives</b></legend>
             <textarea type="text" id="objective" placeholder="Enter your objective" required rows="5"></textarea>
         </fieldset>
 
@@ -20,6 +20,9 @@
             <legend>
                 <b> Personal Information</b> 
             </legend>
+            <label for="username">User Name:</label>
+            <input type="text" id="username" placeholder="Enter your user name" required>
+
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your name" required>
 
@@ -61,11 +64,14 @@
         <!-- resume will be generated below -->
       </div>
 
-      <button id="shareButton">Share</button>
-      <button id="copyButton">Copy Link</button>
-      <div id="feedbackMessage" style="display: none; color: green;">Link copied to clipboard!</div>
-
-
+      <div id="shareable-link-container" style="display: none;">
+        <h2>Shareable Link</h2>
+        <p>Download Your Resume PDF from This Link</p>
+        <a href="#" id="shareable-link" target="_blank">Your Unique Resume Link</a>
+    </div>
+    <button id="download-pdf"><b>Download As PDF</b></button>
+    
+    
 
       <script src="script.js"></script>
 </body>
